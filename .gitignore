@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+token.json
+credentials.json
+.env
+*.pkl
+*.joblib
+*.json
+# BUT keep model JSON files only in /models
+!models/*.json
+
+latest_output.json

@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+
+  fastapi:
+    build: ./app
+    container_name: fastapi
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app 
+      - ./models:/models
+    env_file:
+      - .env
+    restart: always
+    working_dir: /app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+
+  dashboard:
+    build: ./dashboard
+    container_name: dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./dashboard:/dashboard 
+    depends_on:
+      - fastapi
+    env_file:
+      - .env
+    restart: always

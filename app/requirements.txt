@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+numpy
+joblib
+xgboost
+scikit-learn
+pydantic
+streamlit
+requests
+textblob
+python-dotenv
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
