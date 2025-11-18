@@ -68,8 +68,6 @@ style F fill:#f9f,stroke:#333,stroke-width:1px
 style G fill:#ff9,stroke:#333,stroke-width:1px
 style H fill:#9ff,stroke:#333,stroke-width:1px
 📂 Project Structure
-bash
-Copy code
 AI_social_engineering_detector/
 │
 ├── app/                     # FastAPI inference service
@@ -101,8 +99,6 @@ AI_social_engineering_detector/
 POST /predict
 Input:
 
-powershell
-Copy code
 amount
 geo_mismatch
 is_new_device
@@ -113,10 +109,9 @@ sentiment_score
 urgency_score
 is_manipulative
 communication_score
+
 Output:
 
-nginx
-Copy code
 transaction_risk
 communication_risk
 fraud_probability
@@ -138,19 +133,18 @@ Alert history
 Auto-refresh every 5 seconds
 
 🐳 Running via Docker
+
 1️⃣ Build services
-bash
-Copy code
 docker-compose build
+
 2️⃣ Run the full system
-bash
-Copy code
 docker-compose up
+
 3️⃣ Open dashboard
-arduino
-Copy code
 http://localhost:8501
+
 📊 Models Used
+
 Purpose	Model
 Transaction risk	XGBoost
 Communication risk	Logistic Regression
