@@ -100,6 +100,7 @@ Fully isolated microservices:
 
 ->dashboard
 
+"""md
 ## 🗂️ Project Structure
 
 
@@ -128,7 +129,7 @@ AI_social_engineering_detector/
 ├── .env
 └── README.md
 
-
+"""
 
 🔬 Machine Learning Models
 1️⃣ Communication Risk Model (Logistic Regression)
