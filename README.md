@@ -100,27 +100,30 @@ Fully isolated microservices:
 
 ->dashboard
 
-🗂️ Project Structure
+## 🗂️ Project Structure
+
+
 AI_social_engineering_detector/
 │
-├── app/                        # FastAPI service
-│   ├── main.py                 # Fraud inference endpoint
-│   └── requirements.txt
+├── app/ # FastAPI inference service
+│ ├── main.py # Prediction + /latest API
+│ └── requirements.txt
 │
-├── watcher/                    # Gmail ingestion + NLP
-│   ├── watcher_gmail_api.py
-│   ├── credentials.json
-│   └── requirements.txt
+├── watcher/ # Gmail ingestion + NLP feature extraction
+│ ├── watcher_gmail_api.py
+│ ├── credentials.json
+│ └── requirements.txt
 │
-├── dashboard/                  # Real-time UI
-│   └── app.py
+├── dashboard/ # Real-time Streamlit dashboard
+│ └── app.py
 │
-├── models/                     # Trained ML models
-│   ├── xgb_tx_model.json
-│   ├── logreg_comm_model.joblib
-│   └── fusion_model.joblib
+├── models/ # Trained ML models
+│ ├── xgb_tx_model.json
+│ ├── logreg_comm_model.joblib
+│ └── fusion_model.joblib
 │
-├── training/                   # Dataset + training scripts
+├── training/ # Dataset + training scripts
+│
 ├── docker-compose.yml
 ├── .env
 └── README.md
